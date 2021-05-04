@@ -6,13 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pain_in_the_chocolate"
+                android:textSize="20dp"
+                android:textFontWeight="800"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 €"
+                    android:layout_alignParentLeft="true"
+                    />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Une viennoiserie au beurre et au chocolat"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            >
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+
+                >
+                <ImageButton
+                    android:id="@+id/buttonPlanet"
+                    android:layout_column="0"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/ic_internet"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    />
+                <ToggleButton
+                    android:id="@+id/toggleButtonBought"
+                    android:text="Acheter"
+                    android:layout_column="1"
+                    android:textSize="20dp"
+                    android:textOn="@string/toggle_bought"
+                    android:textOff="@string/toggle_buy"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    >
+                </ToggleButton>
+            </GridLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
