@@ -1,13 +1,28 @@
 package com.unicorn.androidmod02tp01.model;
 
-public class Article {
+
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@ToString
+public class Article implements Serializable {
 
     private int id;
     private String label;
     private Double price;
     private String description;
     private Float rating;
-
+    private String url;
+    private boolean bought;
+/*
     public Article() {
         super();
     }
@@ -17,20 +32,14 @@ public class Article {
         this.id = id;
     }
 
-    public Article(int id, String label, Double price, String description, Float rating) {
-        super();
+    public Article(int id, String label, Double price, String description, Float rating, String url, boolean bought) {
         this.id = id;
         this.label = label;
         this.price = price;
         this.description = description;
         this.rating = rating;
-    }
-
-    public Article(String label, Double price, String description, Float rating) {
-        super();
-        this.label = label;
-        this.price = price;
-        this.description = description;
+        this.url = url;
+        this.bought = bought;
     }
 
     public int getId() {
@@ -72,4 +81,22 @@ public class Article {
     public void setRating(Float rating) {
         this.rating = rating;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public boolean isBought() {
+        return bought;
+    }
+
+    public void setBought(boolean bought) {
+        this.bought = bought;
+    }
+
+ */
 }
