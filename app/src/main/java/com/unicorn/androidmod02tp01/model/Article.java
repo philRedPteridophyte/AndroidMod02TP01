@@ -15,7 +15,7 @@ import lombok.ToString;
 @ToString
 public class Article implements Serializable {
 
-    private int id;
+    private long id;
     private String label;
     private Double price;
     private String description;

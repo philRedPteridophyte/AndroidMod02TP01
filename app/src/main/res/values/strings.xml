@@ -3,4 +3,6 @@
     <string name="pain_in_the_chocolate">Pain au chocolat</string>
     <string name="toggle_bought">Acheté</string>
     <string name="toggle_buy">Acheter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
