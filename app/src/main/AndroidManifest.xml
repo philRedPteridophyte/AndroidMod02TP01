@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidMod02TP01">
-        <activity android:name=".activity.ArticleDetailActivity"
+        <activity android:name=".activity.ConfigurationActivity"></activity>
+        <activity
+            android:name=".activity.ArticleDetailActivity"
             android:parentActivityName=".activity.ListeArticlesActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
-        <activity android:name=".activity.ListeArticlesActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".activity.ListeArticlesActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.InfoUrlActivity" />
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>

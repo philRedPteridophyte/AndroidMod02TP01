@@ -1,12 +1,15 @@
 package com.unicorn.androidmod02tp01.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.unicorn.androidmod02tp01.R;
 import com.unicorn.androidmod02tp01.adapter.ArticlesAdapter;
@@ -117,5 +120,25 @@ public class ListeArticlesActivity extends AppCompatActivity {
         Log.v(TAG, "onCreateOptionsMenu: ");
         getMenuInflater().inflate(R.menu.menu_liste_article,menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        boolean ret = false;
+        Log.v(TAG, "onOptionsItemSelected: ");
+        switch (item.getItemId()){
+            case R.id.menu_config_button:
+                openConfigurationActivity();
+                ret = true;
+                break;
+            default:
+                ret = super.onOptionsItemSelected(item);
+                break;
+        }
+        return ret;
+    }
+
+    private void openConfigurationActivity(){
+        this.startActivity(new Intent(this, ConfigurationActivity.class));
     }
 }
